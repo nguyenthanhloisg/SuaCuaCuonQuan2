@@ -282,31 +282,68 @@
                     <div class="w-dyn-list">
 
                       <div data-w-id="c146ef20-ad9d-a44e-0bd5-2c4a888af2a4" style="opacity: 0" role="list"
-                        class="blogs-list w-dyn-items">
+                        class="blogs-list w-dyn-items" id="cuacuon-list">
 
-                        <div role="listitem" class="blog-item w-dyn-item">
-                          <a href="#" class="blog-item-link w-inline-block">
-                            <div class="blog-image-wrapper">
-                              <img
-                                src="https://suacuacuonquan2.com/images/cua-cuon/tên ảnh.jpg"
-                                alt="" class="blog-image" />
-                            </div>
-                            <div class="blog-title-wrapper">
-                              <div class="blog-item-content-top">
-                                <div class="margin-bottom margin-xxsmall">
-                                  <h2 class="text-size-medium">
-                                    <strong class="weight-normal">Tên ảnh</strong>
-                                  </h2>
+                      <script>
+                        // Danh sách tên file ảnh cửa cuốn
+                        const cuacuonImages = [
+                          "Cửa Cuốn Đức TiTaDoor PM492A.jpg",
+                          "Cửa Cuốn Đức Titadoor PM503.jpg",
+                          "Cửa Cuốn Đức Titadoor PM535SR.jpg",
+                          "Cửa Cuốn Đức Titadoor PM701.jpg",
+                          "Cửa Cuốn Đức Titadoor PM1020S.jpg",
+                          "Cửa Cuốn Đức Titadoor PM1030S.jpg",
+                          "Cửa Cuốn Đức Titadoor PM1060S.jpg",
+                          "Cửa Cuốn Đức Titadoor PM1295i.jpg",
+                          "Cửa Cuốn Đức Titadoor PM2049sr.jpg",
+                          "Cửa Cuốn Titadoor LG 12.jpg",
+                          "Cửa Cuốn Titadoor LG 15.jpg",
+                          "Cửa Cuốn Đức Khe Thoáng Titadoor PM52A.jpg",
+                          "Cửa Cuốn Đức khe thoáng Titadoor PM55SR.jpg",
+                          "Cửa Cuốn Đức Khe Thoáng Titadoor PM2022S.jpg",
+                          "Cửa Cuốn Đức Khe Thoáng Titadoor PM2095i.jpg",
+                          "Cửa Cuốn Đức Titadoor PM 501K.jpg",
+                          "Cửa Cuốn Đức TiTaDoor PM50SR.jpg",
+                          "Cửa Cuốn Đức Titadoor PM71SR.jpg",
+                          "Cửa Cuốn Đức Titadoor PM76x.jpg",
+                          "Cửa Cuốn Đức Titadoor PM482.jpg",
+                          "Cửa Cuốn Đức Titadoor PM491.jpg",
+                          "Cửa Cuốn Đức TiTaDoor PM492.jpg",
+                        ];
+
+                        const container = document.getElementById("cuacuon-list");
+
+                        cuacuonImages.forEach(imgName => {
+                          const item = document.createElement("div");
+                          item.className = "blog-item w-dyn-item";
+                          item.setAttribute("data-type", "cuacuon");
+
+                          item.innerHTML = `
+                            <a href="#" class="blog-item-link w-inline-block">
+                              <div class="blog-image-wrapper">
+                                <img
+                                  src="https://suacuacuonquan2.com/images/cua-cuon/${imgName}"
+                                  alt="${imgName}" class="blog-image" />
+                              </div>
+                              <div class="blog-title-wrapper">
+                                <div class="blog-item-content-top">
+                                  <div class="margin-bottom margin-xxsmall">
+                                    <h2 class="text-size-medium">
+                                      <strong class="weight-normal">${imgName.replace('.jpg','')}</strong>
+                                    </h2>
+                                  </div>
+                                </div>
+                                <div class="project-button-wrapper">
+                                  <div class="button-text-item weight-medium color-org">
+                                    Liên Hệ<br />0915 823 850
+                                  </div>
                                 </div>
                               </div>
-                              <div class="project-button-wrapper">
-                                <div class="button-text-item weight-medium color-org">
-                                  Liên Hệ<br />0915 823 850
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
+                            </a>
+                          `;
+                          container.appendChild(item);
+                        });
+                      </script>
 
                       </div>
 
